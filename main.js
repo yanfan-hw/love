@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var hour = document.querySelector('.hour');
   var min = document.querySelector('.min');
   var second = document.querySelector('.second');
+  const music = ['ido', 'noinaycoanh', 'nguoiamphu'];
 
   var startDate = new Date(2019, 04, 01);
   days.innerText = Math.floor((new Date - startDate)/86400000);
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     second.innerText = Math.floor(ms % 3600000 % 60000 / 1000);
   }
 
+  document.querySelector("audio").setAttribute("src", `music/${music[Math.floor(Math.random()*music.length)]}.mp3`);
   setInterval(countTime, 1000);
 
 }, false);
