@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var second = document.querySelector('.second');
   const music = ['ido', 'noinaycoanh', 'nguoiamphu'];
 
-  var startDate = new Date(2019, 04, 01);
-  days.innerText = Math.floor((new Date - startDate)/86400000);
+  var startDate = new Date("Apr 1, 2019").getTime();
+  days.innerText = Math.floor((new Date - startDate)/(1000 * 60 * 60 * 24));
   countTime();
 
   function countTime() {
